@@ -1,0 +1,17 @@
+[project]
+name = "library-management-system"
+version = "1.0.0"
+description = "A command-line Library Management System built with Python."
+authors = [{name = "Nehal Akhil"}]
+requires-python = ">=3.9"
+dynamic = ["optional-dependencies"]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+optional-dependencies = {dev = {file = ["dev-requirements.txt"]}}
+
+[project.scripts]
+library-management = "library.__main__:main"
